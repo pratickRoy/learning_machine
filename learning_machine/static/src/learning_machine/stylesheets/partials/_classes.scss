@@ -1,0 +1,50 @@
+.flex {
+
+  display: flex;
+
+  &.row {
+    flex-direction: row;
+
+    &.center-vertical {
+      align-items: center;
+    }
+
+    &.center-horizontal {
+      justify-content: center;
+    }
+  }
+
+  &.column {
+    flex-direction: column;
+
+    &.center-vertical {
+      justify-content: center;
+    }
+
+    &.center-horizontal {
+      align-items: center;
+    }
+  }
+
+
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.fixed {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.lm-hide {
+  width: 0;
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+}

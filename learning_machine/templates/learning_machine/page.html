@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script data-main="{% static 'script.js' %}" src="{% static 'src/learning_machine/scripts/libs/require.js' %}"></script>
+
+    <title>{{ page.title }}</title>
+</head>
+<body class="flex column">
+
+    {% include 'learning_machine/action_bar.html' with title=page.title %}
+    <div id="lm-page-container" class="flex row">
+        <div id="lm-page-navigation-container" class="flex column">
+            {%  include 'learning_machine/navigation_drawer.html' %}
+        </div>
+        <div id="lm-page-body-container" class="flex column center-horizontal">
+            {% include page.body %}
+        </div>
+    </div>
+    <div id="lm-page-snackbar" class="flex row center-horizontal">Place Message Here</div>
+
+</body>
+</html>

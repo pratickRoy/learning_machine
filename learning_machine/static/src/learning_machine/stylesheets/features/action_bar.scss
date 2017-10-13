@@ -1,0 +1,19 @@
+.hamburger-inner {
+
+  &, &::before, &::after {
+    background-color: $primary-color-text;
+    border-radius: 1px;
+  }
+}
+
+.lm-action-bar {
+
+  height: $action-bar-height;
+  background-color: $primary-color-dark;
+  padding-left: $common-padding;
+
+  &-brand {
+    @include text($text-type-action-bar-title, $primary-color-text);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,32 @@
+$text-type-normal : 1;
+$text-type-action-bar-title: 2;
+$text-type-button: 3;
+$text-type-subheading: 4;
+
+@mixin text($type: $text-type-normal, $color: $primary-text-color) {
+
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+
+  @if ($type == $text-type-normal) {
+    font-size: 0.811em;
+  } @else if($type == $text-type-action-bar-title) {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.248em;
+  } @else if($type == $text-type-button) {
+    font-size: 0.874em;
+    text-transform: uppercase
+  } @else if($type == $text-type-subheading) {
+    font-size: 0.936em;
+  }
+}
+
+.text-normal {
+  @include text($text-type-normal)
+}
+.text-subheading {
+  @include text($text-type-normal)
+}
+.text-app {
+  @include text($text-type-action-bar-title)
+}

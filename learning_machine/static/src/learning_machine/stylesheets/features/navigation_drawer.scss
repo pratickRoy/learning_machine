@@ -1,0 +1,41 @@
+$navigation-intra-section-padding: 15px;
+$navigation-sign-in-icon-dimension: 48px;
+
+#lm-navigation-drawer {
+
+  &-account {
+    flex: 1;
+    background-color: $primary-color;
+    padding: $navigation-intra-section-padding;
+
+    &-sign-in-icon {
+      width: $navigation-sign-in-icon-dimension;
+      height: $navigation-sign-in-icon-dimension;
+    }
+
+    &-name {
+      @include text($text-type-subheading, $primary-color-text);
+      padding: 5px 0 0 5px;
+    }
+  }
+  &-divider {
+    background-color: $divider-color;
+    height: 1px;
+  }
+  &-algorithms-list {
+    flex: 3;
+  }
+}
+
+.lm-navigation-drawer-algorithms-list-item {
+  @extend .clickable;
+  padding: 15px;
+  @include text($text-type-button, $primary-text-color);
+  &.is-active {
+    @include text($text-type-button, $secondary-text-color);
+    background-color: $accent-color;
+  }
+  &:hover {
+    @include text($text-type-button, $secondary-text-color);
+  }
+}

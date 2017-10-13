@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+#lm-page-container {
+  width: 100%;
+  flex: 1;
+}
+
+#lm-page-navigation-container {
+
+  height: calc(100vh - 50px);
+  width: 0;
+  opacity: 0;
+  transition: width 1s, opacity 1s;
+  &.is-active {
+    width: 30%;
+    opacity: 1;
+    border-right: solid $primary-color 1px;
+  }
+}
+
+#lm-page-body-container {
+
+  width: 100%;
+  flex: 1;
+  height: 100%;
+}
+
+#lm-page-snackbar {
+
+  visibility: hidden;
+  width: 25%;
+  background-color: $snackbar-color;
+  @include text($text-type-subheading, $primary-color-text);
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  margin: 0 auto;
+
+  &.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadeout {
+      from {bottom: 30px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
+  }
+}
+

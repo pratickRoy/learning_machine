@@ -1,0 +1,95 @@
+{% load staticfiles %}
+
+<div id="lm-gaussian-naive-bayes-card" class="card ">
+    <div class="lm-card-cover flex column center-horizontal">
+        <img class="lm-naive-bayes-card-image" src="{% static 'images/naive_bayes.jpg' %}">
+        <h4><b>Gaussian Naive Bayes</b></h4>
+        <button id="lm-gaussian-naive-bayes-button" class="lm-button">Run</button>
+    </div>
+    <div class="lm-card-running lm-hide flex column ">
+        <img id="lm-gaussian-naive-bayes-card-close-button" class="card-close-button clickable" src="{% static 'images/close.png' %}"/>
+        <div id="lm-gaussian-card-running-results">
+            <div id="lm-gaussian-card-running-results-training-data" class="flex column center-horizontal">
+
+                <div class="text-normal" style="width: 81%; margin-bottom: 15px; text-align: justify">
+                    Here we are training our classifer to predict if a vehicle should go slow or fast
+                    based upon two factors <u>grade</u> and <u>bumpiness</u>.
+                    We are training both our classifer and the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html">SKLearn</a> classifier to 7500 training datasets
+                    and then testing them with 2500 datasets.
+                    <br>
+                    More Customizations and Features to follow soon!
+                </div>
+
+                <div class="lm-card-running-results-data-key text-app">Training Data : 7500 datasets</div>
+                <div class="lm-card-running-results-data-values flex row">
+                    <div id='grade' class="flex column results left">
+                        <span class="text-button">Grade</span>
+                        <br>
+                    </div>
+                    <div id='bumpy' class="flex column results left">
+                        <span class="text-button">Bumpy</span>
+                        <br>
+                    </div>
+                    <div id='speed' class="flex column results right">
+                        <span class="text-button">Speed</span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div id="lm-gaussian-card-running-results-testing-data" class="flex column center-horizontal">
+                <div class="lm-card-running-results-data-key text-app">Testing Data : 2500 datasets</div>
+                <div class="lm-card-running-results-data-values flex row">
+                    <div id='grade_result' class="flex column results left">
+                        <span class="text-button">Grade</span>
+                        <br>
+                    </div>
+                    <div id='bumpy_result' class="flex column results left">
+                        <span class="text-button">Bumpy</span>
+                        <br>
+                    </div>
+                    <div id='sklearn_predicted_speed_result' class="flex column results right">
+                        <span class="text-button">Sk Predicted Speed</span>
+                        <br>
+                    </div>
+                    <div id='predicted_speed_result' class="flex column results right">
+                        <span class="text-button">Predicted Speed</span>
+                        <br>
+                    </div>
+                    <div id='correct_speed_result' class="flex column results right">
+                        <span class="text-button">Correct Speed</span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div id="accuracy" class="flex column center-horizontal">
+                <div class="lm-card-running-results-data-key text-app">Accuracy</div>
+                <div class="accuracy-kv flex row">
+                    <div class="accuracy-key">Accuracy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+                    <div id="impl-accuracy-value"></div>
+                </div>
+                <div class="accuracy-kv flex row">
+                    <div class="skLearn-key">SK Learn Accuracy&nbsp;&nbsp;&nbsp; </div>
+                    <div id="skLearn-accuracy-value"></div>
+                </div>
+            </div>
+            <div id="plot" class="flex column center-horizontal">
+                <div class="lm-card-running-results-data-key text-app">Plot</div>
+                <img id="image-plot" style="width: 100%">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="lm-multinomial-naive-bayes-card" class="card">
+    <div class="lm-card-cover flex column center-horizontal">
+        <img class="lm-naive-bayes-card-image" src="{% static 'images/naive_bayes.jpg' %}">
+        <h4><b>Multinomial Naive Bayes</b></h4>
+        <button id="lm-multinomial-naive-bayes-button" class="lm-button">Run</button>
+    </div>
+    <div class="lm-card-running lm-hide flex column center-horizontal">
+         <img id="lm-multinomial-naive-bayes-card-close-button" class="card-close-button clickable" src="{% static 'images/close.png' %}"/>
+        <div id="lm-multinomial-card-running-results">
+
+        </div>
+    </div>
+</div>
