@@ -29,7 +29,7 @@ SECRET_KEY = 'j5n!50ymw&nm&f+fgsbs%f18ndd^=a#odff3#avlfw@j#xm1@b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['learning-machine.herokuapp.com']
 
 # Application definition
 
@@ -126,11 +126,11 @@ STATIC_URL = '/static/'
 
 
 # Generate the css file from style.scss
-def generate_css(input_file=PROJECT_DIR + '/static/src/style.scss',
-                 output_file=PROJECT_DIR + '/static/style.css'):
-
-    bash_command = "sass --sourcemap=none --watch " + input_file + ":" + output_file
-    subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
-
-
-generate_css()
+#def generate_css(input_file=PROJECT_DIR + '/static/src/style.scss',
+#                 output_file=PROJECT_DIR + '/static/style.css'):
+#
+#    bash_command = "sass --sourcemap=none --watch " + input_file + ":" + output_file
+#    subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
+#
+#
+#generate_css()
